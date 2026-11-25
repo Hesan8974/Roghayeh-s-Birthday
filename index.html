@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سورپرایز تولد رقیه 💜</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Tahoma, sans-serif;
+    background: linear-gradient(135deg, #100927, #48216f, #142d65);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 750px;
+    margin: 55px auto;
+    padding: 30px 20px;
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 25px;
+    box-shadow: 0 0 35px rgba(190,130,255,0.3);
+}
+
+h1 {
+    color: #f4cfff;
+    text-shadow: 0 0 15px #c77dff;
+}
+
+p {
+    line-height: 2.3;
+    font-size: 17px;
+}
+
+button {
+    border: none;
+    padding: 15px 28px;
+    margin: 15px;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #a855f7, #ec4899);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #a855f7;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.06);
+}
+
+.roses {
+    font-size: 30px;
+    margin: 18px;
+}
+
+#surprise {
+    display: none;
+    margin-top: 30px;
+    animation: appear 1.5s ease;
+}
+
+.rarity-image {
+    width: 250px;
+    max-width: 90%;
+    display: block;
+    margin: 25px auto;
+    border-radius: 20px;
+    box-shadow: 0 0 25px #9b5de5;
+}
+
+.letter {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid #d8b4fe;
+    border-radius: 20px;
+    padding: 25px;
+    margin-top: 25px;
+}
+
+.letter h2 {
+    color: #f4cfff;
+}
+
+.signature {
+    color: #a5d8ff;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.footer {
+    color: #e9d5ff;
+    margin-top: 25px;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="roses">💎 💙 🌹 💙 💎</div>
+
+    <h1>یک سورپرایز برای تو رقیه!</h1>
+
+    <p>
+        یک هدیه جادویی برات آماده شده...
+        <br>
+        آماده‌ای؟ ✨
+    </p>
+
+    <button onclick="showSurprise()">
+        OPEN YOUR GIFT 💜
+    </button>
+
+    <div id="surprise">
+
+        <h1>تولدت مبارک رقیه! 🎂</h1>
+
+        <div class="roses">💙 🌹 💎 🌹 💙</div>
+
+       <img src="rarity.png" alt="Rarity" class="rarity-image">
+
+        <div class="letter">
+
+            <h2>برای رقیه، دوست قشنگم:</h2>
+
+            <p>
+                رقیه جانم،
+                <br>
+                بعضی آدم‌ها بدون اینکه خودشون بدونن،
+                با حضورشون دنیا رو قشنگ‌تر می‌کنن؛
+                تو یکی از همون آدم‌هایی. ✨
+                <br>
+                امیدوارم سال جدید زندگیت پر از اتفاق‌های شیرین،
+                آرزوهای برآورده‌شده و خنده‌هایی باشه
+                که هیچ‌وقت تموم نمی‌شن.
+                <br>
+                امیدوارم همیشه بدرخشی،
+                درست مثل الماسی که حتی توی تاریکی
+                هم نور خودش رو حفظ می‌کنه. 💎
+                <br>
+                هیچ‌وقت فراموش نکن که لایق تمام زیبایی‌های این دنیایی.
+                <br>
+                تولدت مبارک رفیق قشنگم.
+                دوستت دارم. 💙
+            </p>
+
+            <p class="signature">
+                از طرف حِسان 💜
+            </p>
+
+        </div>
+
+        <div class="roses">🌹 💙 🌹 💙 🌹</div>
+
+        <p class="footer">
+            همیشه بخند رفیق قشنگم؛
+            دنیا با لبخندت قشنگ‌تره! 💙
+        </p>
+
+    </div>
+
+</div>
+
+<audio id="birthdayMusic" loop preload="auto">
+    <source src="07._clair_de_lune.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function showSurprise() {
+
+    document.getElementById("surprise").style.display = "block";
+
+    const music = document.getElementById("birthdayMusic");
+
+    music.play().catch(function(error) {
+        console.log("مشکل در پخش موسیقی:", error);
+    });
+
+}
+</script>
+
+</body>
+</html>
